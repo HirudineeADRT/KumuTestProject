@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "KumuTestProject/lambda.js",
-        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n    //test\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -72,6 +72,17 @@
           "stageDeploymentId": "qkqe4q",
           "mode": 1
         }
+      },
+      "s3as2TestLahiru": {
+        "name": "s3as2TestLahiru",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "as2-test-lahiru"
+          }
+        }
       }
     },
     "customTemplate": {
@@ -89,7 +100,15 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "javascript",
+          "version": "2.176.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -99,7 +118,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1561023646033
+    "lastSave": 1561026349678
   },
   "VCS_STATE": {
     "provider": "GitHub",
